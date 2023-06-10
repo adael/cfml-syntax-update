@@ -1,0 +1,18 @@
+{
+  "name": "cfml-syntax-updates",
+  "injectionSelector": "L:source.cfml.script",
+  "scopeName": "source.cfml.injection",
+  "patterns": [
+    {
+      "include": "#include-keyword"
+    }
+  ],
+  "repository": {
+    "include-keyword": {
+      "patterns": [{
+        "match": "(?i)\\b(include)\\b",
+        "name": "keyword.include"
+      }]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "author": "Carlos Gant",
+  "publisher": "CarlosGant",
+  "name": "cfml-syntax-updates",
+  "displayName": "cfml-syntax-updates",
+  "description": "This extension fixes some syntaxes on KamasamaK CFML extension",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.79.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "grammars": [{
+      "scopeName": "source.cfml.injection",
+      "path": "./syntaxes/cfml.injection.tmLanguage.json",
+      "injectTo": ["embedding.cfml"]
+    }]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adael/cfml-syntax-update.git"
+  },
+  "extensionDependencies": [
+    "KamasamaK.vscode-cfml"
+  ]
+}
