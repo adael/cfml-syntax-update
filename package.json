@@ -3,8 +3,9 @@
   "publisher": "CarlosGant",
   "name": "cfml-syntax-updates",
   "displayName": "cfml-syntax-updates",
-  "description": "This extension fixes some syntaxes on KamasamaK CFML extension",
-  "version": "1.0.0",
+  "description": "This extension improves a bit KamasamaK CFML extension",
+  "version": "1.0.1",
+  "main": "./extension",
   "engines": {
     "vscode": "^1.79.0"
   },
@@ -12,11 +13,38 @@
     "Programming Languages"
   ],
   "contributes": {
-    "grammars": [{
-      "scopeName": "source.cfml.injection",
-      "path": "./syntaxes/cfml.injection.tmLanguage.json",
-      "injectTo": ["embedding.cfml"]
-    }]
+    "grammars": [
+      {
+        "scopeName": "source.cfml.injection",
+        "path": "./syntaxes/cfml.injection.tmLanguage.json",
+        "injectTo": [
+          "embedding.cfml"
+        ]
+      }
+    ],
+    "commands": [
+      {
+        "command": "cfml-syntax-updates.cfmlCopyDottedPath",
+        "title": "CFML: Copy Component Dotted Path"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "cfml-syntax-updates.cfmlCopyDottedPath"
+        }
+      ],
+      "editor/title/context": [
+        {
+          "command": "cfml-syntax-updates.cfmlCopyDottedPath"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "cfml-syntax-updates.cfmlCopyDottedPath"
+        }
+      ]
+    }
   },
   "repository": {
     "type": "git",
